@@ -1,0 +1,378 @@
+{% extends 'cvlayout.html.twig' %}
+{% set active = 'homepage' %}
+{% set name = 'Florent ARCAMBAL' %}
+
+{% block content %}
+
+    
+    
+<!-- Begin Contact Section -->
+<section id="about-me">
+<div itemscope itemtype="http://schema.org/Person">
+ 
+<!-- Begin Profile Image Section -->
+<div class="header_1">
+<img src="img/photo.jpg" itemprop="image"  alt="Florent Arcambal" />
+</div>
+<!-- End Profile Image Section -->
+ 
+<!-- Begin Profile Information Section -->
+<div class="header_2">
+ 
+<h1><span itemprop="name">{{ name }}</span></h1>
+<h3><span itemprop="jobTitle">Ingénieur Etude Senior en Développement web</span></h3>
+ 
+<!-- Begin PostalAddress Schema -->
+<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+<ul class="info_1">
+<li class="address"><span itemprop="streetAddress">172 rue du Rouet</span>, <span itemprop="addressLocality">Marseille</span>, <span itemprop="addressRegion">Bouche du Rh&ocirc;ne</span>, <span itemprop="postalCode">13008</span> <span itemprop="addressCountry">France</span></li>
+</ul>
+</div>
+<!-- End PostalAddress Schema -->
+ 
+<ul class="info_2">
+<li class="phone"><span itemprop="telephone">(+33)06 61 98 65 04</span></li>
+<li class="email"><a href="mailto:florent.arcambal@gmail.com" itemprop="email">florent.arcambal@gmail.com</a></li>
+<li class="site_url"><a rel="me" itemprop="url" href="http://www.arcambal.fr" title="www.arcambal.fr">www.arcambal.fr</a></li>
+<li class="twitter"><a rel="me" itemprop="url" href="http://twitter.com/florentarcambal" title="Follow Me on Twitter">@florentarcambal</a></li>
+</ul>
+ 
+</div>
+<!-- End Profile Information Section -->
+ 
+</div>
+</section>
+<!-- End Contact Section -->
+
+
+
+
+<section id="experience">
+ 
+<!-- Position #1 -->
+<div itemscope itemtype="http://schema.org/Organization">
+
+
+<span class="job">
+<p class="time">February 2009 &#45; Present</p>
+<h2 class="top"><span itemprop="jobTitle">Ingénieur Etude Senior</span></h2>
+<p class="bus1"><span itemprop="name">Company Name 1</span></p>
+
+</span>
+ 
+<p itemprop="description">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. 
+</p>
+ 
+</div>
+ 
+
+
+
+<!-- Position #2 -->
+<div itemscope itemtype="http://schema.org/Organization">
+ 
+<span class="job">
+<p class="time">2009-20010</p>
+<h2><span itemprop="jobTitle">Web Developer</span></h2>
+<p class="bus1"><span itemprop="name">Bleuroy</span></p>
+
+ </span>
+ 
+ 
+<p itemprop="description">Développement, test et mise en production de la plateforme des sites
+immochan.<br />
+Elle permet la création et la gestion des sites des différents centres commerciaux du groupe Auchan.
+</p>
+ 
+</div>
+
+
+<!-- Position #3 -->
+<div itemscope itemtype="http://schema.org/Organization">
+
+<span class="job">
+<span class="time">2007-2009</span>
+<h2><span itemprop="jobTitle">Développeur Web</span></h2>
+<span itemprop="name">Quai 13 </span>
+</span>
+ 
+<p itemprop="description">Réalisation de divers Sites Web :
+euromediterranee.fr  Portail A fort Contenu
+speedway.fr Vente en ligne
+oxylanevillage.com Portail a contenu
+etc…
+</p>
+ 
+</div>
+
+
+<!-- Position #4 -->
+<div itemscope itemtype="http://schema.org/Organization">
+
+<span class="job">
+<span class="time">2006 - 2007</span>
+<h2><span itemprop="jobTitle">Développeur Web</span></h2>
+<span itemprop="name">Visual Info</span>
+</span>
+
+<p itemprop="description">
+Développement de sites et de fonctionalités Frontoffice pour le site kelassur.com   
+</p>
+ 
+</div>
+
+
+
+<!-- Position #5 -->
+<div itemscope itemtype="http://schema.org/Organization">
+
+<span class="job">
+<p class="time">2004-2005</p>
+<h2><span itemprop="jobTitle">Web Developer / Programmer</span></h2>
+<span itemprop="name">FEEDER-Eizo France </span>
+
+</span>
+ 
+<p itemprop="description">(stage fin d'étude suivi d'un CDD)
+J’ai mis en place le pole web de la société. De la mise en place des serveurs, à la création des sites web ainsi qu’au développement des services web, j’ai acquis une vision globale sur la gestion des projets web.<br /> 
+<br />
+Par la suite, je me suis tourné vers un poste d’ingénieur Technico Commercial dédié aux Réseaux et à la Sécurité. Définition du besoin client, rédaction des contrats de service, prestation en clientèle, formation des partenaires. Ces notions importantes m’ont apporté une bonne expérience de la gestion de projet en SSII.
+</p>
+ 
+</div>
+ 
+ 
+ 
+<div itemscope itemtype="http://schema.org/JobPosting">
+  <meta itemprop="specialCommitments" content="VeteranCommit" />
+  <h2 itemprop="title">Software Engineer</h2>{{ url('homepage') }}
+  <span>
+    <p><strong>Location:</strong> <span itemprop="jobLocation" itemscope itemtype="http://schema.org/Place"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <span itemprop="addressLocality">Kirkland</span> <span itemprop="addressRegion">WA</span></span></span></p>
+  </span>
+
+  <p><strong>Industry:</strong> <span itemprop="industry">Computer Software</span>
+
+  <br><strong>Occupational Category:</strong> <span itemprop="occupationalCategory">15-1132.00 Software Developers, Application</span>
+
+  <br><strong>Hours:</strong> <span itemprop="employmentType">Full-time</span>, <span itemprop="workHours">40 hours per week</span>
+
+  <br><strong>Salary:</strong> <span itemprop="salaryCurrency">USD</span> <span itemprop="baseSalary">100000</span>
+  </p>
+
+  <p itemprop="description">
+    <strong>Description:</strong> <span itemprop="hiringOrganization" itemscope itemtype="http://schema.org/Organization"><span itemprop="name">ABC Company Inc.</span>
+    seeks a full-time mid-level software engineer to develop in-house tools.</span>
+  </p>
+
+  <p><strong>Responsibilities:</strong></p>
+  <ul itemprop="responsibilities">
+    <li>Design and write specifications for tools for in-house costumers</li>
+    <li>Build tools according to specifications</li>
+  </ul>
+
+  <p><strong>Educational requirements:</strong></p>
+  <ul itemprop="educationRequirements">
+    <li>Bachelor's Degree in Computer Science, Information Systems or related fields of study.</li>
+  </ul>
+
+  <p><strong>Experience requirements:</strong></p>
+  <ul itemprop="experienceRequirements">
+   <li>Minumum 3 years experience as a software engineer</li>
+  </ul>
+
+  <p><strong>Desired Skills:</strong></p>
+  <ul itemprop="skills">
+    <li>Web application development using Java/J2EE</li>
+    <li>Web application development using Python or familiarity with dynamic programming languages</li>
+  </ul>
+
+  <p><strong>Qualifications:</strong></p>
+  <ul itemprop="qualifications">
+    <li>Ability to work in a team environment with members of varying skill levels.</li>
+    <li>Highly motivated.</li>
+    <li>Learns quickly.</li>
+  </ul>
+
+  <p><strong>Benefits:</strong></p>
+    <ul><li>ABC Corp provides top-tier employee compensation benefits and a relaxed, team-oriented work environment, including:<span itemprop="benefits"> Medical, Life, Dental</span></li>
+    </ul>
+
+      <p><strong>Incentives:</strong></p>
+        <ul><li><span itemprop="incentives">Performance-based annual bonus plan, project-completion bonuses</span></li>
+      </ul>
+
+  <p>If interested in this position, please email us your resume, along with salary requirements and a cover letter to Jobs@abc.123.</p>
+  <p>Date Posted: <span itemprop="datePosted">2011-10-31</span></p>
+</div> 
+ 
+ 
+ 
+</section>
+
+<section id="skills">
+<!-- Begin Skills Section -->
+<div itemscope itemtype="http://schema.org/ItemList">
+ 
+<dl>
+<dt itemprop="name">Compétences:</dt>
+<dd>
+ 
+
+<ul class="list1">
+<li itemprop="itemListElement">XHTML</li>
+<li itemprop="itemListElement">HTML5</li>
+<li itemprop="itemListElement">PHP</li>
+<li itemprop="itemListElement">JavaScript</li>
+<li itemprop="itemListElement">Magento</li>
+<li itemprop="itemListElement">WordPress</li>
+</ul>
+<ul class="list2">
+<li itemprop="itemListElement">HTML</li>
+<li itemprop="itemListElement">CSS</li>
+<li itemprop="itemListElement">MySQL</li>
+<li itemprop="itemListElement">jQuery</li>
+<li itemprop="itemListElement">CMS Made Simple</li>
+<li itemprop="itemListElement">Photoshop</li>
+</ul>
+</section>
+ 
+</dd>
+</dl>
+ 
+</div>
+<!-- End Skills Section -->
+
+
+
+<section id="education">
+
+<div itemscope itemtype="http://schema.org/EducationalOrganization">
+ 
+<p class="bus1"><span itemprop="name">IAAI de Marseille</span></p>
+ 
+<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+<span itemprop="streetAddress">Avenue Maréchal Lelcerc</span>
+<br />
+<span itemprop="postalCode">13003</span> <span itemprop="addressLocality">Marseille</span>, <span itemprop="addressRegion">BDR</span>, <span itemprop="addressCountry">France</span>
+</div>
+ 
+<p class="summary"><span itemprop="name">Web Design</span></p>
+<p class="time">2003 &#45; 2004</p>
+ 
+<p class="edu-info">
+École d’Ingénieur Institut des Applications Avancées de l’Internet de Marseille (IAAI)<br />
+Obtention du diplôme d’Ingénieur option Ingénierie des Contenus.<br />
+Cette Option est consacrée aux services dédiés aux multimédia.<br />
+{#
+<a itemprop="url" href="http://www.utoledo.edu/" target="_blank" title="University of Toledo">www.utoledo.edu</a>
+#}
+</p>
+ 
+</div>
+
+
+<div itemscope itemtype="http://schema.org/EducationalOrganization">
+ 
+<p class="bus1"><span itemprop="name">Site EERIE de Nîmes</span></p>
+ 
+<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+<span itemprop="streetAddress">Parc Scientifique Georges Besse</span>
+<br />
+<span itemprop="postalCode">30035 </span> <span itemprop="addressLocality">Nîmes</span>, <span itemprop="addressRegion">Gard</span>, <span itemprop="addressCountry">France</span>
+</div>
+ 
+<p class="summary"><span itemprop="name">Ecole pour les Etudes et la Recherche en Informatique et Electronique</span></p>
+<p class="time">2002 &#45; 2003</p>
+ 
+<p class="edu-info">
+Institut Internet de l’Ecole des Mines d’Ales(I²EMA) formation intermédiation de l'Information.<br />
+En parallèle avec ma dernière année d'IUP des Métiers de l'Information et de la communication.<br />
+Obtention de la MAÎTRISE.
+{#
+<a itemprop="url" href="http://www.utoledo.edu/" target="_blank" title="University of Toledo">www.utoledo.edu</a>
+#}
+</p>
+ 
+</div>
+
+
+
+<div itemscope itemtype="http://schema.org/EducationalOrganization">
+ 
+<p class="bus1"><span itemprop="name">Faculté des Carmes de Nîmes</span></p>
+ 
+<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+<span itemprop="streetAddress">Place Gabriel Péri</span>
+<br />
+<span itemprop="postalCode">30000 </span> <span itemprop="addressLocality">Nîmes</span>, <span itemprop="addressRegion">Gard</span>, <span itemprop="addressCountry">France</span>
+</div>
+ 
+<p class="summary"><span itemprop="name">IUP MIC</span></p>
+<p class="time">2000 &#45; 2002</p>
+ 
+<p class="edu-info">
+Institut Universitaire Professionnalisée dans les Métiers de l’Information et de la Communication.<br />
+Obtention du DEUG et de la LICENCE de l'IUP MIC.
+<a itemprop="url" href="http://www.iup-infocom.iut-nimes.fr/" target="_blank" title="IUP MIC">www.iup-infocom.iut-nimes.fr/</a>
+
+</p>
+ 
+</div>
+
+
+<div itemscope itemtype="http://schema.org/EducationalOrganization">
+ 
+<p class="bus1"><span itemprop="name">IUT de Montpellier</span></p>
+ 
+<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+<span itemprop="streetAddress">99 Avenue Occitanie</span>
+<br />
+<span itemprop="postalCode">34090 </span> <span itemprop="addressLocality">Montpellier</span>, <span itemprop="addressRegion">Hérault</span>, <span itemprop="addressCountry">France</span>
+</div>
+ 
+<p class="summary"><span itemprop="name">DUT Mesures Physiques</span></p>
+<p class="time">1998 &#45; 2000</p>
+ 
+<p class="edu-info">
+Diplôme Universitaire Technologique en Mesures Physiques.<br />
+Réalisation d’une carte d’acquisition au cours du stage de fin d’année en entreprise. Obtention du DEUG et de la LICENCE de l'IUP MIC.<br />
+<a itemprop="url" href="http://www.iutmontp.univ-montp2.fr/" target="_blank" title="IUT Montpellier">www.iutmontp.univ-montp2.fr</a>
+
+</p>
+ 
+</div>
+
+
+</section>
+
+{#
+
+<!-- Begin Social Media and Download Links -->
+<div itemscope itemtype="http://schema.org/Person">
+ 
+<ul class="icons_1">
+<li><a rel="author" itemprop="url" href="https://profiles.google.com/jwagner719" title="Google Profile"><img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32" alt="Google Profile"></a></li>
+<li><a rel="me" itemprop="url" href="http://dribbble.com/" title="Dribbble"><img src="images/dribbble.png" width="32" height="32" alt="Dribbble" /></a></li>
+<li><a rel="me" itemprop="url" href="http://www.linkedin.com/" title="LinkedIn"><img src="images/linkedin.png" width="32" height="32" alt="LinkedIn" /></a></li>
+<li><a rel="me" itemprop="url" href="http://www.facebook.com/" title="Facebook"><img src="images/facebook.png" width="32" height="32" alt="Facebook" /></a></li>
+<li><a rel="me" itemprop="url" href="http://www.flickr.com/" title="Flickr"><img src="images/flickr.png" width="32" height="32" alt="Flickr" /></a></li>
+<li><a rel="me" itemprop="url" href="http://twitter.com/" title="Follow Me on Twitter!"><img src="images/twitter.png" width="32" height="32" alt="Follow Me on Twitter!" /></a></li>
+</ul>
+ 
+<ul class="icons_2">
+<li><a href="resume.pdf" title="Download Resume PDF"><img src="images/download.png" width="48" height="48" alt="Download Resume PDF" /></a></li>
+</ul>
+ 
+</div>
+<!-- End Social Media and Download Links -->
+#}
+
+
+<section id="languages">
+</section>
+<section id="about-me">
+</section>
+
+{% endblock %}

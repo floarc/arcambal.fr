@@ -6,14 +6,22 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Validator\Constraints as Assert;
 
 $app->match('/', function() use ($app) {
+	//return $app['twig']->render('index.html.twig');
+	return $app['twig']->render('cv.html.twig');
+})->bind('homepage');
+
+/*
+$app->match('/', function() use ($app) {
     $app['session']->getFlashBag()->add('warning', 'Warning flash message');
     $app['session']->getFlashBag()->add('info', 'Info flash message');
     $app['session']->getFlashBag()->add('success', 'Success flash message');
     $app['session']->getFlashBag()->add('error', 'Error flash message');
 
-    return $app['twig']->render('index.html.twig');
+    //return $app['twig']->render('index.html.twig');
+    return $app['twig']->render('cv.html.twig');
 })->bind('homepage');
-
+*/
+/*
 $app->match('/login', function(Request $request) use ($app) {
     $form = $app['form.factory']->createBuilder('form')
         ->add('username', 'text', array('label' => 'Username', 'data' => $app['session']->get('_security.last_username')))
@@ -136,7 +144,7 @@ $app->get('/page-with-cache', function() use ($app) {
 
     return $response;
 })->bind('page_with_cache');
-
+*/
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
         return;
