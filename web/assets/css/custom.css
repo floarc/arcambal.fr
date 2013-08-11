@@ -1,0 +1,11 @@
+span.job, span.job h2, span.job p {
+	display: inline;
+}
+
+#about-me img {
+	float: right;
+}
+
+#jobTitle {
+	display: block;
+} 
