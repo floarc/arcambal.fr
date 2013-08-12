@@ -73,6 +73,7 @@ if ($app['debug'] && isset($app['cache.path'])) {
     ));
 }
 
+
 if (isset($app['assetic.enabled']) && $app['assetic.enabled']) {
     $app->register(new AsseticServiceProvider(), array(
         'assetic.options' => array(
@@ -80,11 +81,30 @@ if (isset($app['assetic.enabled']) && $app['assetic.enabled']) {
             'auto_dump_assets' => $app['debug'],
         )
     ));
+	
+// 	$app['assetic.path_to_web'] = __DIR__ . '/assets';
+// 	$app['assetic.options'] = array(
+// 		'debug' => true,
+// 	);	
+
+
+if (!isset($app['java_path']) ) {
+	$app['java_path'] = '/usr/bin/java';
+}
+
+
 
     $app['assetic.filter_manager'] = $app->share(
         $app->extend('assetic.filter_manager', function($fm, $app) {
             $fm->set('lessphp', new Assetic\Filter\LessphpFilter());
-
+			$fm->set('yui_css', new Assetic\Filter\Yui\CssCompressorFilter(
+				__DIR__.'/../vendor/yui/yuicompressor/yuicompressor-2.4.7.jar',$app['java_path']
+			));
+			
+			$fm->set('yui_js', new Assetic\Filter\Yui\JsCompressorFilter(
+				__DIR__.'/../vendor/yui/yuicompressor/yuicompressor-2.4.7.jar',$app['java_path']
+			));			
+			
             return $fm;
         })
     );
@@ -93,15 +113,28 @@ if (isset($app['assetic.enabled']) && $app['assetic.enabled']) {
         $app->extend('assetic.asset_manager', function($am, $app) {
             $am->set('styles', new Assetic\Asset\AssetCache(
                 new Assetic\Asset\GlobAsset(
-                    $app['assetic.input.path_to_css'],
-                    array($app['assetic.filter_manager']->get('lessphp'))
+                    //$app['assetic.input.path_to_css'],
+					array(
+						$app['assetic.input.path_to_less'],
+						$app['assetic.input.path_to_css']
+					),
+                    array(
+						$app['assetic.filter_manager']->get('lessphp'),
+						$app['assetic.filter_manager']->get('yui_css')
+					)
                 ),
                 new Assetic\Cache\FilesystemCache($app['assetic.path_to_cache'])
             ));
             $am->get('styles')->setTargetPath($app['assetic.output.path_to_css']);
 
             $am->set('scripts', new Assetic\Asset\AssetCache(
-                new Assetic\Asset\GlobAsset($app['assetic.input.path_to_js']),
+                new Assetic\Asset\GlobAsset(
+					$app['assetic.input.path_to_js']
+					,
+                    array(
+						$app['assetic.filter_manager']->get('yui_js')
+					)					
+				),
                 new Assetic\Cache\FilesystemCache($app['assetic.path_to_cache'])
             ));
             $am->get('scripts')->setTargetPath($app['assetic.output.path_to_js']);
